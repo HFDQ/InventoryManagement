@@ -1,0 +1,2 @@
+D:\Learning\新建文件夹\obj\x86\Debug\InventoryManagement.csprojResolveAssemblyReference.cache
+D:\Learning\新建文件夹\obj\x86\Debug\InventoryManagement.csproj.CoreCompileInputs.cache

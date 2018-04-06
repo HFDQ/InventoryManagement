@@ -1,0 +1,8 @@
+D:\Learning\新建文件夹\obj\Debug\InventoryManagement.Form1.resources
+D:\Learning\新建文件夹\obj\Debug\InventoryManagement.csproj.GenerateResource.Cache
+D:\Learning\新建文件夹\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
+D:\Learning\新建文件夹\bin\Debug\InventoryManagement.exe.config
+D:\Learning\新建文件夹\bin\Debug\InventoryManagement.exe
+D:\Learning\新建文件夹\bin\Debug\InventoryManagement.pdb
+D:\Learning\新建文件夹\obj\Debug\InventoryManagement.exe
+D:\Learning\新建文件夹\obj\Debug\InventoryManagement.pdb
