@@ -18,3 +18,4 @@ D:\Learning\InventoryManagement\obj\Debug\Properties.Resources.resources
 D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.Form_PurchaseOrder.resources
 D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.Form_DrugInfoSelector.resources
 D:\Learning\InventoryManagement\bin\Debug\XMLFile1.xml
+D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.csprojResolveAssemblyReference.cache
