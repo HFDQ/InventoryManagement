@@ -83,6 +83,8 @@ namespace InventoryManagement
 
 		private DataGridViewTextBoxColumn Column11;
 
+		private ToolStripButton toolStripButton7;
+
 		public Form1()
 		{
 			this.InitializeComponent();
@@ -288,6 +290,12 @@ namespace InventoryManagement
 			}.ShowDialog();
 		}
 
+		private void toolStripButton7_Click_1(object sender, EventArgs e)
+		{
+			Form_PurchaseOrder frm = new Form_PurchaseOrder(this.sqlConn);
+			frm.Show(this);
+		}
+
 		protected override void Dispose(bool disposing)
 		{
 			if (disposing && this.components != null)
@@ -299,286 +307,223 @@ namespace InventoryManagement
 
 		private void InitializeComponent()
 		{
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton5,
-            this.toolStripSeparator3,
-            this.toolStripLabel1,
-            this.toolStripTextBox1,
-            this.toolStripLabel2,
-            this.toolStripTextBox2,
-            this.toolStripButton1,
-            this.toolStripSeparator1,
-            this.toolStripButton2,
-            this.toolStripSeparator2,
-            this.toolStripButton3,
-            this.toolStripButton4,
-            this.toolStripButton6});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(913, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(84, 22);
-            this.toolStripButton5.Text = "链接到数据库";
-            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(68, 22);
-            this.toolStripLabel1.Text = "药品拼音码";
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(44, 22);
-            this.toolStripLabel2.Text = "批号：";
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 25);
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton1.Text = "查询";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton2.Text = "保存";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(36, 22);
-            this.toolStripButton3.Text = "删除";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(72, 22);
-            this.toolStripButton4.Text = "采购单处理";
-            this.toolStripButton4.Visible = false;
-            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(72, 22);
-            this.toolStripButton6.Text = "销售单处理";
-            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column12,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 25);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(913, 386);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "品种ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 61;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "productGeneralName";
-            this.Column2.HeaderText = "药品通用名";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 72;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "FactoryName";
-            this.Column3.HeaderText = "生产厂家";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "DictionarySpecificationCode";
-            this.Column4.HeaderText = "规格";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 51;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "DictionaryDosageCode";
-            this.Column5.HeaderText = "剂型";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 51;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ValidPeriod";
-            this.Column6.HeaderText = "有效期（月）";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 72;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "Decription";
-            this.Column12.HeaderText = "产地";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 51;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "batchNumber";
-            this.Column7.HeaderText = "批号";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 51;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "outValidDate";
-            this.Column8.HeaderText = "过期日";
-            this.Column8.Name = "Column8";
-            this.Column8.Width = 61;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "CanSaleNum";
-            this.Column9.HeaderText = "可销数量";
-            this.Column9.Name = "Column9";
-            this.Column9.Width = 61;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "PurchasePricce";
-            this.Column10.HeaderText = "采购价";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 61;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "Id1";
-            this.Column11.HeaderText = "库存ID";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 61;
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(913, 411);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.toolStrip1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+			ComponentResourceManager resources = new ComponentResourceManager(typeof(Form1));
+			this.toolStrip1 = new ToolStrip();
+			this.toolStripButton5 = new ToolStripButton();
+			this.toolStripSeparator3 = new ToolStripSeparator();
+			this.toolStripLabel1 = new ToolStripLabel();
+			this.toolStripTextBox1 = new ToolStripTextBox();
+			this.toolStripLabel2 = new ToolStripLabel();
+			this.toolStripTextBox2 = new ToolStripTextBox();
+			this.toolStripButton1 = new ToolStripButton();
+			this.toolStripSeparator1 = new ToolStripSeparator();
+			this.toolStripButton2 = new ToolStripButton();
+			this.toolStripSeparator2 = new ToolStripSeparator();
+			this.toolStripButton3 = new ToolStripButton();
+			this.toolStripButton4 = new ToolStripButton();
+			this.toolStripButton6 = new ToolStripButton();
+			this.dataGridView1 = new DataGridView();
+			this.Column1 = new DataGridViewTextBoxColumn();
+			this.Column2 = new DataGridViewTextBoxColumn();
+			this.Column3 = new DataGridViewTextBoxColumn();
+			this.Column4 = new DataGridViewTextBoxColumn();
+			this.Column5 = new DataGridViewTextBoxColumn();
+			this.Column6 = new DataGridViewTextBoxColumn();
+			this.Column12 = new DataGridViewTextBoxColumn();
+			this.Column7 = new DataGridViewTextBoxColumn();
+			this.Column8 = new DataGridViewTextBoxColumn();
+			this.Column9 = new DataGridViewTextBoxColumn();
+			this.Column10 = new DataGridViewTextBoxColumn();
+			this.Column11 = new DataGridViewTextBoxColumn();
+			this.toolStripButton7 = new ToolStripButton();
+			this.toolStrip1.SuspendLayout();
+			((ISupportInitialize)this.dataGridView1).BeginInit();
+			base.SuspendLayout();
+			this.toolStrip1.ImageScalingSize = new Size(24, 24);
+			this.toolStrip1.Items.AddRange(new ToolStripItem[]
+			{
+				this.toolStripButton5,
+				this.toolStripSeparator3,
+				this.toolStripLabel1,
+				this.toolStripTextBox1,
+				this.toolStripLabel2,
+				this.toolStripTextBox2,
+				this.toolStripButton1,
+				this.toolStripSeparator1,
+				this.toolStripButton2,
+				this.toolStripSeparator2,
+				this.toolStripButton3,
+				this.toolStripButton4,
+				this.toolStripButton6,
+				this.toolStripButton7
+			});
+			this.toolStrip1.Location = new Point(0, 0);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Padding = new Padding(0, 0, 2, 0);
+			this.toolStrip1.Size = new Size(1656, 31);
+			this.toolStrip1.TabIndex = 0;
+			this.toolStrip1.Text = "toolStrip1";
+			this.toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton5.Image = (Image)resources.GetObject("toolStripButton5.Image");
+			this.toolStripButton5.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton5.Name = "toolStripButton5";
+			this.toolStripButton5.Size = new Size(122, 28);
+			this.toolStripButton5.Text = "链接到数据库";
+			this.toolStripButton5.Click += new EventHandler(this.toolStripButton5_Click);
+			this.toolStripSeparator3.Name = "toolStripSeparator3";
+			this.toolStripSeparator3.Size = new Size(6, 31);
+			this.toolStripLabel1.Name = "toolStripLabel1";
+			this.toolStripLabel1.Size = new Size(100, 28);
+			this.toolStripLabel1.Text = "药品拼音码";
+			this.toolStripTextBox1.Name = "toolStripTextBox1";
+			this.toolStripTextBox1.Size = new Size(148, 31);
+			this.toolStripLabel2.Name = "toolStripLabel2";
+			this.toolStripLabel2.Size = new Size(64, 28);
+			this.toolStripLabel2.Text = "批号：";
+			this.toolStripTextBox2.Name = "toolStripTextBox2";
+			this.toolStripTextBox2.Size = new Size(148, 31);
+			this.toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton1.Image = (Image)resources.GetObject("toolStripButton1.Image");
+			this.toolStripButton1.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new Size(50, 28);
+			this.toolStripButton1.Text = "查询";
+			this.toolStripButton1.Click += new EventHandler(this.toolStripButton1_Click);
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new Size(6, 31);
+			this.toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton2.Image = (Image)resources.GetObject("toolStripButton2.Image");
+			this.toolStripButton2.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton2.Name = "toolStripButton2";
+			this.toolStripButton2.Size = new Size(50, 28);
+			this.toolStripButton2.Text = "保存";
+			this.toolStripButton2.Click += new EventHandler(this.toolStripButton2_Click);
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new Size(6, 31);
+			this.toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton3.Image = (Image)resources.GetObject("toolStripButton3.Image");
+			this.toolStripButton3.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton3.Name = "toolStripButton3";
+			this.toolStripButton3.Size = new Size(50, 28);
+			this.toolStripButton3.Text = "删除";
+			this.toolStripButton3.Click += new EventHandler(this.toolStripButton3_Click);
+			this.toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
+			this.toolStripButton4.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton4.Name = "toolStripButton4";
+			this.toolStripButton4.Size = new Size(104, 28);
+			this.toolStripButton4.Text = "采购单处理";
+			this.toolStripButton4.Click += new EventHandler(this.toolStripButton4_Click);
+			this.toolStripButton6.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton6.Image = (Image)resources.GetObject("toolStripButton6.Image");
+			this.toolStripButton6.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton6.Name = "toolStripButton6";
+			this.toolStripButton6.Size = new Size(104, 28);
+			this.toolStripButton6.Text = "销售单处理";
+			this.toolStripButton6.Click += new EventHandler(this.toolStripButton6_Click);
+			this.dataGridView1.AllowUserToAddRows = false;
+			this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+			this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Columns.AddRange(new DataGridViewColumn[]
+			{
+				this.Column1,
+				this.Column2,
+				this.Column3,
+				this.Column4,
+				this.Column5,
+				this.Column6,
+				this.Column12,
+				this.Column7,
+				this.Column8,
+				this.Column9,
+				this.Column10,
+				this.Column11
+			});
+			this.dataGridView1.Dock = DockStyle.Fill;
+			this.dataGridView1.Location = new Point(0, 31);
+			this.dataGridView1.Margin = new Padding(4);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowTemplate.Height = 23;
+			this.dataGridView1.Size = new Size(1656, 585);
+			this.dataGridView1.TabIndex = 1;
+			this.dataGridView1.CellContentClick += new DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			this.dataGridView1.DataError += new DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
+			this.Column1.DataPropertyName = "Id";
+			this.Column1.HeaderText = "品种ID";
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
+			this.Column1.Width = 91;
+			this.Column2.DataPropertyName = "productGeneralName";
+			this.Column2.HeaderText = "药品通用名";
+			this.Column2.Name = "Column2";
+			this.Column2.ReadOnly = true;
+			this.Column2.Width = 107;
+			this.Column3.DataPropertyName = "FactoryName";
+			this.Column3.HeaderText = "生产厂家";
+			this.Column3.Name = "Column3";
+			this.Column3.ReadOnly = true;
+			this.Column3.Width = 91;
+			this.Column4.DataPropertyName = "DictionarySpecificationCode";
+			this.Column4.HeaderText = "规格";
+			this.Column4.Name = "Column4";
+			this.Column4.ReadOnly = true;
+			this.Column4.Width = 75;
+			this.Column5.DataPropertyName = "DictionaryDosageCode";
+			this.Column5.HeaderText = "剂型";
+			this.Column5.Name = "Column5";
+			this.Column5.ReadOnly = true;
+			this.Column5.Width = 75;
+			this.Column6.DataPropertyName = "ValidPeriod";
+			this.Column6.HeaderText = "有效期（月）";
+			this.Column6.Name = "Column6";
+			this.Column6.ReadOnly = true;
+			this.Column6.Width = 107;
+			this.Column12.DataPropertyName = "Decription";
+			this.Column12.HeaderText = "产地";
+			this.Column12.Name = "Column12";
+			this.Column12.Width = 75;
+			this.Column7.DataPropertyName = "batchNumber";
+			this.Column7.HeaderText = "批号";
+			this.Column7.Name = "Column7";
+			this.Column7.Width = 75;
+			this.Column8.DataPropertyName = "outValidDate";
+			this.Column8.HeaderText = "过期日";
+			this.Column8.Name = "Column8";
+			this.Column8.Width = 91;
+			this.Column9.DataPropertyName = "CanSaleNum";
+			this.Column9.HeaderText = "可销数量";
+			this.Column9.Name = "Column9";
+			this.Column9.Width = 91;
+			this.Column10.DataPropertyName = "PurchasePricce";
+			this.Column10.HeaderText = "采购价";
+			this.Column10.Name = "Column10";
+			this.Column10.Width = 91;
+			this.Column11.DataPropertyName = "Id1";
+			this.Column11.HeaderText = "库存ID";
+			this.Column11.Name = "Column11";
+			this.Column11.ReadOnly = true;
+			this.Column11.Width = 91;
+			this.toolStripButton7.DisplayStyle = ToolStripItemDisplayStyle.Text;
+			this.toolStripButton7.Image = (Image)resources.GetObject("toolStripButton7.Image");
+			this.toolStripButton7.ImageTransparentColor = Color.Magenta;
+			this.toolStripButton7.Name = "toolStripButton7";
+			this.toolStripButton7.Size = new Size(140, 28);
+			this.toolStripButton7.Text = "采购单新增品种";
+			this.toolStripButton7.Click += new EventHandler(this.toolStripButton7_Click_1);
+			base.AutoScaleDimensions = new SizeF(9f, 18f);
+			base.AutoScaleMode = AutoScaleMode.Font;
+			base.ClientSize = new Size(1656, 616);
+			base.Controls.Add(this.dataGridView1);
+			base.Controls.Add(this.toolStrip1);
+			base.Margin = new Padding(4);
+			base.Name = "Form1";
+			this.Text = "Form1";
+			base.Load += new EventHandler(this.Form1_Load);
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
+			((ISupportInitialize)this.dataGridView1).EndInit();
+			base.ResumeLayout(false);
+			base.PerformLayout();
 		}
 	}
 }
