@@ -19,3 +19,15 @@ D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.Form_PurchaseOrder
 D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.Form_DrugInfoSelector.resources
 D:\Learning\InventoryManagement\bin\Debug\XMLFile1.xml
 D:\Learning\InventoryManagement\obj\Debug\InventoryManagement.csprojResolveAssemblyReference.cache
+D:\DQ\InventoryManagement\bin\Debug\XMLFile1.xml
+D:\DQ\InventoryManagement\bin\Debug\InventoryManagement.exe.config
+D:\DQ\InventoryManagement\bin\Debug\InventoryManagement.exe
+D:\DQ\InventoryManagement\bin\Debug\InventoryManagement.pdb
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.Form1.resources
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.Form_DrugInfoSelector.resources
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.Form_PurchaseOrder.resources
+D:\DQ\InventoryManagement\obj\Debug\Properties.Resources.resources
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.csproj.GenerateResource.cache
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.exe
+D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.pdb
