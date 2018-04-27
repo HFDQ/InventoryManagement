@@ -95,6 +95,15 @@ namespace InventoryManagement
             }
             else
             {
+                toolStripLabel1.Visible = true;
+                toolStripTextBox1.Visible = true;
+                toolStripLabel2.Visible = true;
+                toolStripTextBox2.Visible = true;
+                toolStripButton1.Visible = true;
+                toolStripButton2.Visible = true;
+                toolStripButton3.Visible = true;
+                toolStripButton4.Visible = true;
+                toolStripButton6.Visible = true;
                 toolStripButton7.Visible = false;
             }
         }
