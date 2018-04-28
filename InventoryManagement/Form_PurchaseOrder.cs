@@ -306,7 +306,7 @@ namespace InventoryManagement
                 }
 
 
-                string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId=@PurchaseOrderId) where id = =@PurchaseOrderId ";
+                string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId=@PurchaseOrderId) where id =@PurchaseOrderId ";
                 List<SqlParameter> ParamList1 = new List<SqlParameter>();
                 ParamList1.Add(new SqlParameter("@PurchaseOrderId", this.PurchaseOrderId));
                 TranSqlModel tsm1 = new TranSqlModel

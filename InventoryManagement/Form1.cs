@@ -93,6 +93,19 @@ namespace InventoryManagement
             {
                 toolStripButton7.Visible = true;
             }
+            else if (ConfigurationManager.AppSettings["Role"] == "TJPZ")
+            {
+                toolStripButton7.Visible = true;
+                toolStripLabel1.Visible = false;
+                toolStripTextBox1.Visible = false;
+                toolStripLabel2.Visible = false;
+                toolStripTextBox2.Visible = false;
+                toolStripButton1.Visible = false;
+                toolStripButton2.Visible = false;
+                toolStripButton3.Visible = false;
+                toolStripButton4.Visible = false;
+                toolStripButton6.Visible = false;
+            }
             else
             {
                 toolStripLabel1.Visible = true;
