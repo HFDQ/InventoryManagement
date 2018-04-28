@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
- 
 <Connection>
-  <ip address="192.168.0.254" name="sa" pw="1111" database="Pharmacy_ZZYYv3"></ip>
-  
+  <ip address="." name="sa" pw="1111" database="Yuanhetang"></ip>
 </Connection>
   

@@ -306,16 +306,21 @@ namespace InventoryManagement
                 }
 
 
-                string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId=@PurchaseOrderId) where id =@PurchaseOrderId ";
-                List<SqlParameter> ParamList1 = new List<SqlParameter>();
-                ParamList1.Add(new SqlParameter("@PurchaseOrderId", this.PurchaseOrderId));
-                TranSqlModel tsm1 = new TranSqlModel
-                {
-                    SqlText = sql1,
-                    Parameters = ParamList1
-                };
-                submitList.Add(tsm1);
+
             }
+
+            string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId=@PurchaseOrderId1) where id =@PurchaseOrderId ";
+
+            List<SqlParameter> ParamList1 = new List<SqlParameter>();
+            ParamList1.Add(new SqlParameter("@PurchaseOrderId", this.PurchaseOrderId));
+            ParamList1.Add(new SqlParameter("@PurchaseOrderId1", this.PurchaseOrderId));
+            TranSqlModel tsm1 = new TranSqlModel
+            {
+                SqlText = sql1,
+                Parameters = ParamList1
+            };
+            submitList.Add(tsm1);
+
             if (submitList.Count <= 0)
             {
                 MessageBox.Show("您没有给这个采购单新增品种记录！保存是没有意义的！");

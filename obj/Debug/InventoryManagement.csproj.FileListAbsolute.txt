@@ -31,4 +31,3 @@ D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.csproj.GenerateResource.
 D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.csproj.CoreCompileInputs.cache
 D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.exe
 D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.pdb
-D:\DQ\InventoryManagement\obj\Debug\InventoryManagement.csprojResolveAssemblyReference.cache
