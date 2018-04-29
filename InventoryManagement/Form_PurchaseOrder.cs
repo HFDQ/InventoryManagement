@@ -309,15 +309,12 @@ namespace InventoryManagement
 
             }
 
-            string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId=@PurchaseOrderId1) where id =@PurchaseOrderId ";
-
-            List<SqlParameter> ParamList1 = new List<SqlParameter>();
-            ParamList1.Add(new SqlParameter("@PurchaseOrderId", this.PurchaseOrderId));
-            ParamList1.Add(new SqlParameter("@PurchaseOrderId1", this.PurchaseOrderId));
+            string sql1 = "update [PurchaseOrder]  set  TotalMoney=(select SUM( Amount*PurchasePrice) from PurchaseOrderDetail where PurchaseOrderId='" + this.PurchaseOrderId + "') where id ='" + this.PurchaseOrderId + "'";
+            MessageBox.Show(sql1);
             TranSqlModel tsm1 = new TranSqlModel
             {
-                SqlText = sql1,
-                Parameters = ParamList1
+                SqlText = sql1
+
             };
             submitList.Add(tsm1);
 
@@ -333,7 +330,10 @@ namespace InventoryManagement
                 foreach (TranSqlModel s2 in submitList)
                 {
                     this.command.CommandText = s2.SqlText;
-                    this.command.Parameters.AddRange(s2.Parameters.ToArray<SqlParameter>());
+                    if (s2.Parameters != null)
+                    {
+                        this.command.Parameters.AddRange(s2.Parameters.ToArray<SqlParameter>());
+                    }
                     this.command.ExecuteNonQuery();
                 }
                 this.command.Transaction.Commit();
